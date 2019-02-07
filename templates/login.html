@@ -1,0 +1,38 @@
+{% extends "bootstrap/base.html" %}
+{% block html %}
+
+    {% block head %}
+        {% block title %}
+            <title>Login</title>
+        {% endblock %}
+        {{ super() }}
+    {% endblock %}
+
+    {% block body %}
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <form>
+                        <h1 class="text-center">Hello, Dear User!</h1>
+                        <div class="form-group">
+                            <label for="username"><b>your username</b></label>
+                            <input type="text" class="form-control" id="username" placeholder="type in username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password"><b>your password</b></label>
+                            <input type="password" class="form-control" id="password"
+                                   placeholder="type in password">
+                        </div>
+                        <!-- add bootstrap modal to restore username/password -->
+                        <p class="text-right"><small>Forgot Username / Password?</small></p>
+                        <button type="submit" class="btn btn-secondary btn-lg btn-block">Login</button>
+                        <p><small>Don't have an account? <a href="{{ url_for('signup') }}">SignUp</a> now</small></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    {% endblock %}
+
+{% endblock %}

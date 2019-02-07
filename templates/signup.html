@@ -1,0 +1,53 @@
+{% extends "bootstrap/base.html" %}
+{% block html %}
+
+    {% block head %}
+        {% block title %}
+            <title>Signup</title>
+        {% endblock %}
+        {{ super() }}
+    {% endblock %}
+
+    {% block body %}
+        {% block content %}
+
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-4 align-self-center">
+                        <h1 class="text-center">Sign Up</h1>
+                        <form>
+                            <div class="form-group">
+                                <label for="username"><b>Your name</b></label>
+                                <input type="text" class="form-control" id="username" placeholder="type in name">
+                            </div>
+                            <div class="form-group">
+                                <label for="username"><b>Your surname</b></label>
+                                <input type="text" class="form-control" id="username" placeholder="type in surname">
+                            </div>
+                            <div class="form-group">
+                                <label for="username"><b>Your username</b></label>
+                                <input type="text" class="form-control" id="username" placeholder="type in username">
+                            </div>
+                            <div class="form-group">
+                                <label for="username"><b>Your email</b></label>
+                                <input type="text" class="form-control" id="username" placeholder="type in email">
+                            </div>
+                            <div class="form-group">
+                                <label for="password"><b>Your password</b></label>
+                                <input type="password" class="form-control" id="password"
+                                       placeholder="type in password">
+                            </div>
+                            <div class="form-group">
+                                <label for="password"><b>Repeat password</b></label>
+                                <input type="password" class="form-control" id="password"
+                                       placeholder="type in password">
+                            </div>
+                            <button type="submit" class="btn btn-secondary btn-lg btn-block">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        {% endblock %}
+    {% endblock %}
+{% endblock %}
